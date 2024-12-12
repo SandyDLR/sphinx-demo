@@ -1,0 +1,18 @@
+{
+    "builds": [
+      {
+        "src": "Makefile",
+        "use": "@vercel/static-build",
+        "config": {
+          "buildCommand": "make html"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/build/html/$1"
+      }
+    ]
+  }
+  
